@@ -4,7 +4,7 @@ Donate link:
 tags: nav menu, nav menus, menus, menu
 Requires at least: 3.8
 Tested up to: 3.8
-Stable tag: 1.0
+Stable tag: 1.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -38,8 +38,16 @@ http://core.trac.wordpress.org/ticket/18584
 1. The is a view of the Admin Panel Nav Menu editing area.  The extra selectable options are added to each menu item.
 2. This is the menu a logged IN user would see.  These users don't see "Login" due to the fact that it is denied to logged IN users in the Admin Panel Nav Menus section.
 3. This is the menu a logged OUT user would see.  These users don't see "Logout", "My Account" or "Control Panel" due to the fact that they are denied to logged OUT users in the Admin Panel Nav Menus section.
+4. This is a view of a menu item you could select only to be viewable for administrators.
 
 == Changelog ==
+
+= 1.2 =
+* Removed superfluous "2" from end of plugin name
+
+= 1.1 =
+* Changed "Both" to "All Users" in customWalker.php
+* Added in ability to show menu only to administrators
 
 = 1.0 =
 * Gold release

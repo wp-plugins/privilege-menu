@@ -3,7 +3,7 @@
  * Plugin Name: Privileged Menu
  * Plugin URI: http://www.fuzzguard.com.au/plugins/privileged-menu
  * Description: Used to provide Menu display to users based on their Privilege Level (Currently only either logged in/logged out)
- * Version: 1.0
+ * Version: 1.2
  * Author: Benjamin Guy
  * Author URI: http://www.fuzzguard.com.au
  * License: GPL2
@@ -63,6 +63,9 @@ class privMenu {
     		foreach ( $items as $key => $item ) {
 			$meta_data = get_post_meta( $item->ID, '_priv_menu_role', true);
           		switch( $meta_data ) {
+				case 'admin':
+					$visible = current_user_can( 'manage_options' ) ? true : false;
+					break;
             			case 'in' :
               				$visible = is_user_logged_in() ? true : false;
               				break;
@@ -113,7 +116,7 @@ class privMenu {
 
         $saved_data = false;
 
-        if ( isset( $_POST['priv-menu-logged-in-out'][$menu_item_db_id]  )  && in_array( $_POST['priv-menu-logged-in-out'][$menu_item_db_id], array( 'in', 'out' ) ) ) {
+        if ( isset( $_POST['priv-menu-logged-in-out'][$menu_item_db_id]  )  && in_array( $_POST['priv-menu-logged-in-out'][$menu_item_db_id], array( 'in', 'out', 'admin') ) ) {
               $saved_data = $_POST['priv-menu-logged-in-out'][$menu_item_db_id];
         } elseif ( isset( $_POST['priv-menu-role'][$menu_item_db_id] ) ) {
             $custom_roles = array();
