@@ -212,6 +212,13 @@ class Priv_Menu_Walker extends Walker_Nav_Menu  {
                     <input type="hidden" class="nav-menu-id" value="<?php echo $item->ID ;?>" />
 
                     <div class="logged-input-holder" style="float: left; width: 35%;">
+                        <input type="radio" class="nav-menu-logged-in-out" name="priv-menu-logged-in-out[<?php echo $item->ID ;?>]" id="priv_menu_logged_out-for-<?php echo $item->ID ;?>" <?php checked( 'admin', $logged_in_out ); ?> value="admin" />
+                        <label for="priv_menu_admin_user-for-<?php echo $item->ID ;?>">
+                            <?php _e( 'Admin Users', 'priv-menu-roles'); ?>
+                        </label>
+                    </div>
+
+                    <div class="logged-input-holder" style="float: left; width: 35%;">
                         <input type="radio" class="nav-menu-logged-in-out" name="priv-menu-logged-in-out[<?php echo $item->ID ;?>]" id="priv_menu_logged_out-for-<?php echo $item->ID ;?>" <?php checked( 'out', $logged_in_out ); ?> value="out" />
                         <label for="priv_menu_logged_out-for-<?php echo $item->ID ;?>">
                             <?php _e( 'Logged Out Users', 'priv-menu-roles'); ?>
@@ -228,7 +235,7 @@ class Priv_Menu_Walker extends Walker_Nav_Menu  {
                     <div class="logged-input-holder" style="float: left; width: 30%;">
                         <input type="radio" class="nav-menu-logged-in-out" name="priv-menu-logged-in-out[<?php echo $item->ID ;?>]" id="priv_menu_by_role-for-<?php echo $item->ID ;?>" <?php checked( '', $logged_in_out ); ?> value="" />
                         <label for="priv_menu_by_role-for-<?php echo $item->ID ;?>">
-                            <?php _e( 'Both', 'priv-menu-roles'); ?>
+                            <?php _e( 'All Users', 'priv-menu-roles'); ?>
                         </label>
                     </div>
 
