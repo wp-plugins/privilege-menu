@@ -4,7 +4,7 @@ Donate link:
 tags: nav menu, nav menus, menus, menu
 Requires at least: 3.8
 Tested up to: 3.8
-Stable tag: 1.1
+Stable tag: 1.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -41,6 +41,9 @@ http://core.trac.wordpress.org/ticket/18584
 4. This is a view of a menu item you could select only to be viewable for administrators.
 
 == Changelog ==
+
+= 1.2 =
+* Removed superfluous "2" from end of plugin name
 
 = 1.1 =
 * Changed "Both" to "All Users" in customWalker.php

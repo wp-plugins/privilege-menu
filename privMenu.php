@@ -1,9 +1,9 @@
 <?php
 /**
- * Plugin Name: Privileged Menu 2
+ * Plugin Name: Privileged Menu
  * Plugin URI: http://www.fuzzguard.com.au/plugins/privileged-menu
  * Description: Used to provide Menu display to users based on their Privilege Level (Currently only either logged in/logged out)
- * Version: 1.1
+ * Version: 1.2
  * Author: Benjamin Guy
  * Author URI: http://www.fuzzguard.com.au
  * License: GPL2
