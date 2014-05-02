@@ -8,6 +8,19 @@
  * @since 1.0
  * @uses Walker_Nav_Menu
  */
+
+
+/**
+* Don't display if wordpress admin class is not found
+* Protects code if wordpress breaks
+* @since 1.3
+*/
+if ( ! function_exists( 'is_admin' ) ) {
+    header( 'Status: 403 Forbidden' );
+    header( 'HTTP/1.1 403 Forbidden' );
+    exit();
+}
+
 class Priv_Menu_Walker extends Walker_Nav_Menu  {
 
     /**
@@ -205,8 +218,8 @@ class Priv_Menu_Walker extends Walker_Nav_Menu  {
 
                 <input type="hidden" name="priv-menu-role-nonce" value="<?php echo wp_create_nonce( 'priv-menu-nonce-name' ); ?>" />
 
-                <div class="field-nav_menu_role nav_menu_logged_in_out_field description-wide" style="margin: 5px 0;">
-                    <span class="description"><?php _e( "Display Mode", 'priv-menu-roles' ); ?></span>
+                <div class="field-nav_menu_role nav_menu_logged_in_out_field description-wide" style="margin: 10px 0px; padding: 5px 0px; overflow: hidden; border-bottom: 1px solid #DDDDDD; border-top: 1px solid #DDDDDD;">
+                    <span class="description"><?php _e( "User Restrictions", 'priv-menu-roles' ); ?></span>
                     <br />
 
                     <input type="hidden" class="nav-menu-id" value="<?php echo $item->ID ;?>" />
