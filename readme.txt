@@ -4,7 +4,7 @@ Donate link:
 tags: nav menu, nav menus, menus, menu
 Requires at least: 3.8
 Tested up to: 3.9
-Stable tag: 1.2
+Stable tag: 1.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -41,6 +41,11 @@ http://core.trac.wordpress.org/ticket/18584
 4. This is a view of a menu item you could select only to be viewable for administrators.
 
 == Changelog ==
+
+= 1.3 =
+* Added Wordpress admin class protection coding to customWalker.php
+* Changed "Display Mode" to "User Restriction"
+* Added in bottom border to "User Restriction" area in each widget to make the widget area easier to read
 
 = 1.2 =
 * Removed superfluous "2" from end of plugin name
