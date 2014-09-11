@@ -1,9 +1,9 @@
 === Privilege Menu ===
 Contributors: fuzzguard
-Donate link:
+Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=G8SPGAVH8RTBU
 tags: nav menu, nav menus, menus, menu
 Requires at least: 3.8
-Tested up to: 3.9
+Tested up to: 4.0
 Stable tag: 1.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
