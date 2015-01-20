@@ -21,6 +21,7 @@ if ( ! function_exists( 'is_admin' ) ) {
     exit();
 }
 
+
 class Priv_Menu_Walker extends Walker_Nav_Menu  {
 
     /**
@@ -219,7 +220,7 @@ class Priv_Menu_Walker extends Walker_Nav_Menu  {
                 <input type="hidden" name="priv-menu-role-nonce" value="<?php echo wp_create_nonce( 'priv-menu-nonce-name' ); ?>" />
 
                 <div class="field-nav_menu_role nav_menu_logged_in_out_field description-wide" style="margin: 10px 0px; padding: 5px 0px; overflow: hidden; border-bottom: 1px solid #DDDDDD; border-top: 1px solid #DDDDDD;">
-                    <span class="description"><?php _e( "User Restrictions", 'priv-menu-roles' ); ?></span>
+                    <span class="description"><?php _e( 'User Restrictions', 'privilege-menu' ); ?></span>
                     <br />
 
                     <input type="hidden" class="nav-menu-id" value="<?php echo $item->ID ;?>" />
@@ -227,28 +228,28 @@ class Priv_Menu_Walker extends Walker_Nav_Menu  {
                     <div class="logged-input-holder" style="float: left; width: 35%;">
                         <input type="radio" class="nav-menu-logged-in-out" name="priv-menu-logged-in-out[<?php echo $item->ID ;?>]" id="priv_menu_logged_out-for-<?php echo $item->ID ;?>" <?php checked( 'admin', $logged_in_out ); ?> value="admin" />
                         <label for="priv_menu_admin_user-for-<?php echo $item->ID ;?>">
-                            <?php _e( 'Admin Users', 'priv-menu-roles'); ?>
+                            <?php _e( 'Admin Users', 'privilege-menu'); ?>
                         </label>
                     </div>
 
                     <div class="logged-input-holder" style="float: left; width: 35%;">
                         <input type="radio" class="nav-menu-logged-in-out" name="priv-menu-logged-in-out[<?php echo $item->ID ;?>]" id="priv_menu_logged_out-for-<?php echo $item->ID ;?>" <?php checked( 'out', $logged_in_out ); ?> value="out" />
                         <label for="priv_menu_logged_out-for-<?php echo $item->ID ;?>">
-                            <?php _e( 'Logged Out Users', 'priv-menu-roles'); ?>
+                            <?php _e( 'Logged Out Users', 'privilege-menu'); ?>
                         </label>
                     </div>
 
                     <div class="logged-input-holder" style="float: left; width: 35%;">
                         <input type="radio" class="nav-menu-logged-in-out" name="priv-menu-logged-in-out[<?php echo $item->ID ;?>]" id="priv_menu_logged_in-for-<?php echo $item->ID ;?>" <?php checked( 'in', $logged_in_out ); ?> value="in" />
                         <label for="priv_menu_logged_in-for-<?php echo $item->ID ;?>">
-                            <?php _e( 'Logged In Users', 'priv-menu-roles'); ?>
+                            <?php _e( 'Logged In Users', 'privilege-menu'); ?>
                         </label>
                     </div>
 
                     <div class="logged-input-holder" style="float: left; width: 30%;">
                         <input type="radio" class="nav-menu-logged-in-out" name="priv-menu-logged-in-out[<?php echo $item->ID ;?>]" id="priv_menu_by_role-for-<?php echo $item->ID ;?>" <?php checked( '', $logged_in_out ); ?> value="" />
                         <label for="priv_menu_by_role-for-<?php echo $item->ID ;?>">
-                            <?php _e( 'All Users', 'priv-menu-roles'); ?>
+                            <?php _e( 'All Users', 'privilege-menu'); ?>
                         </label>
                     </div>
 

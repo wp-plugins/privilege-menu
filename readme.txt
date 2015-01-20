@@ -23,6 +23,12 @@ This solves the problem of having to modify theme functions.php files to add in 
 
 == Frequently Asked Questions ==
 
+= Can I localize this plugin for my own language? =
+
+Yes you can.  Included now in this plugin is a folder call "lang".  Within this folder is a file called "privilege-menu.pot".  This file can be used to create the localized translations for your own language using poedit.
+
+If you contact me after you have done this through my website at: https://www.fuzzguard.com.au/contact/ I can include this translation file in the next pugin release.  You will be credited for your work of course.
+
 = I cannot see the options for Privilege Menu under menu items in the Admin Panel? =
 
 This usually occurs due to a plugin conflict.  The Admin Menu Walker can only have one custom walker so any other plugin that uses a custom Admin Menu Walker will cause conflicts with Privilege Menu plugin.
@@ -41,6 +47,11 @@ http://core.trac.wordpress.org/ticket/18584
 4. This is a view of a menu item you could select only to be viewable for administrators.
 
 == Changelog ==
+
+= 1.4 =
+* Added "lang" folder for localization files
+* Added French, German, Spanish and Chinese translations
+* Added .pot file for localization by others.  Located in "lang" folder
 
 = 1.3 =
 * Added Wordpress admin class protection coding to customWalker.php

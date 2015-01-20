@@ -3,9 +3,10 @@
  * Plugin Name: Privileged Menu
  * Plugin URI: http://www.fuzzguard.com.au/plugins/privileged-menu
  * Description: Used to provide Menu display to users based on their Privilege Level (Currently only either logged in/logged out)
- * Version: 1.3
+ * Version: 1.4
  * Author: Benjamin Guy
  * Author URI: http://www.fuzzguard.com.au
+ * Text Domain: privilege-menu
  * License: GPL2
 
     Copyright 2014  Benjamin Guy  (email: beng@fuzzguard.com.au)
@@ -45,13 +46,22 @@ include('customWalker.php');
 
 
 
+
 /**
 * Create class privMenu() to prevent any function name conflicts with other WordPress plugins or the WordPress core.
 * @since 0.1
 */
 class privMenu {
 
-
+        /**
+        * Loads localization files for each language
+        * @since 1.4
+        */
+	function _action_init()
+	{
+		// Localization
+		load_plugin_textdomain('privilege-menu', false, 'privilege-menu/lang/');
+	}
 
 
     	/**
@@ -146,6 +156,12 @@ class privMenu {
 */
 $myprivMenuClass = new privMenu();
 
+
+/**
+* Action of what function to call on wordpress initialization
+* @since 1.4
+*/
+add_action('plugins_loaded', array($myprivMenuClass, '_action_init'));
 
 /**
 * Action of what function to call to save users selection when returned from their browser
