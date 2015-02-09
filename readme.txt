@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 tags: nav menu, nav menus, menus, menu
 Requires at least: 3.8
 Tested up to: 4.1
-Stable tag: 1.4
+Stable tag: 1.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -27,7 +27,7 @@ This solves the problem of having to modify theme functions.php files to add in 
 
 Yes you can.  Included now in this plugin is a folder call "lang".  Within this folder is a file called "privilege-menu.pot".  This file can be used to create the localized translations for your own language using poedit.
 
-If you contact me after you have done this through my website at: https://www.fuzzguard.com.au/contact/ I can include this translation file in the next pugin release.  You will be credited for your work of course.
+If you contact me after you have done this through my website at: https://www.fuzzguard.com.au/contact/ I can include this translation file in the next plugin release.  You will be credited for your work of course.
 
 = I cannot see the options for Privilege Menu under menu items in the Admin Panel? =
 
@@ -47,6 +47,9 @@ http://core.trac.wordpress.org/ticket/18584
 4. This is a view of a menu item you could select only to be viewable for administrators.
 
 == Changelog ==
+
+= 1.5 =
+* Added Serbian Translation - Translated by: Ogi Djuraskovic (firstsiteguide.com)
 
 = 1.4 =
 * Added "lang" folder for localization files
