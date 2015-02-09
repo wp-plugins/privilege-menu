@@ -27,7 +27,7 @@ This solves the problem of having to modify theme functions.php files to add in 
 
 Yes you can.  Included now in this plugin is a folder call "lang".  Within this folder is a file called "privilege-menu.pot".  This file can be used to create the localized translations for your own language using poedit.
 
-If you contact me after you have done this through my website at: https://www.fuzzguard.com.au/contact/ I can include this translation file in the next pugin release.  You will be credited for your work of course.
+If you contact me after you have done this through my website at: https://www.fuzzguard.com.au/contact/ I can include this translation file in the next plugin release.  You will be credited for your work of course.
 
 = I cannot see the options for Privilege Menu under menu items in the Admin Panel? =
 
